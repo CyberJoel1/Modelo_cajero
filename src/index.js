@@ -29,8 +29,8 @@ app.set('views',__dirname+'/views');
 
 app.use(express.static('public'));
 
-app.listen(3000,()=>{
-    console.log("servidor corriendo");
+app.listen((process.env.PORT || 5000), function(){
+  console.log('listening on *:5000');
 });
 
 module.exports={
